@@ -1,0 +1,24 @@
+.default-shadow{
+    box-shadow: 0px 9px 22px -3px rgba(0,0,0,0.81);
+}
+
+.carousel .slide,
+.carousel-inner{
+    height: 60vh;
+}
+
+.card{
+    border: 1px solid rgb(60, 233, 103);
+}
+
+.card-body{
+    border-top: 1px solid rgb(60, 233, 103);
+}
+
+.jumbotron{
+    height: 30vh;
+}
+
+.ofertas{
+    background-image: url("https://a-static.mlcdn.com.br/618x463/tapete-em-lona-madeira-escura-fabrika-de-festa/fabrikadefesta/552576494/d5eaa0dfc8a18494a5fce2b49bdc6d8f.jpg");
+}
