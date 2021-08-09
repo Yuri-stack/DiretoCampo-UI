@@ -1,0 +1,10 @@
+li.nav-item{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.bg-green-light{
+    background-image: linear-gradient(to bottom, #ffffff, #88fd74);
+    /* background-color: #C3FFB9; */
+}
