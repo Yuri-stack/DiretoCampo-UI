@@ -1,0 +1,17 @@
+.form-group{
+    margin: 15px 0 0 0;
+}
+
+.btn{
+    margin-right: 8px;
+}
+
+#img-bg{
+    background-image: url('https://veja.abril.com.br/wp-content/uploads/2017/04/horta-2.jpg');
+
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
