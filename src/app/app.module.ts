@@ -12,6 +12,7 @@ import { StoreComponent } from './components/store/store.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsUserComponent } from './components/products-user/products-user.component';
 import { AccountComponent } from './components/account/account.component';
+import { PostProdutoComponent } from './components/post-produto/post-produto.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AccountComponent } from './components/account/account.component';
     StoreComponent,
     CartComponent,
     ProductsUserComponent,
-    AccountComponent
+    AccountComponent,
+    PostProdutoComponent
   ],
   imports: [
     BrowserModule,
