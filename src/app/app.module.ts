@@ -13,6 +13,9 @@ import { CartComponent } from './components/cart/cart.component';
 import { ProductsUserComponent } from './components/products-user/products-user.component';
 import { AccountComponent } from './components/account/account.component';
 import { PostProdutoComponent } from './components/post-produto/post-produto.component';
+import { PutProdutoComponent } from './components/put-produto/put-produto.component';
+import { RegisterComponent } from './components/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { PostProdutoComponent } from './components/post-produto/post-produto.com
     CartComponent,
     ProductsUserComponent,
     AccountComponent,
-    PostProdutoComponent
+    PostProdutoComponent,
+    PutProdutoComponent,
+    RegisterComponent,
+   
   ],
   imports: [
     BrowserModule,
