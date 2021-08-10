@@ -1,1 +1,47 @@
-<p>account works!</p>
+<div class="account d-flex justify-content-center">
+    <div class="container m-auto soft-shadow rounded my-5">
+        <div class="row d-flex flex-row align-items-center">
+
+            <div class="col-md-6 d-flex justify-content-center border-right">
+                <img class="img-fluid rounded-circle border border-success m-5"
+                    src="https://avatars.githubusercontent.com/u/62682253?v=4" alt="">
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-md-10 my-5">
+                    <h1 class="text-center">Meus Dados</h1>
+
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input class="form-control" type="text" name="email" id="email" placeholder="Seu email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cep">Meu CEP:</label>
+                        <input class="form-control" type="text" name="cep" id="cep" placeholder="Seu cep">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo de de Usuário:</label>
+                        <select class="form-control" name="tipo" id="tipo">
+                            <option>Selecione um tipo de Usuário</option>
+                            <option value="cons">Consumidor</option>
+                            <option value="prod">Produtor</option>
+                            <option value="pdr">Ponto de Retirada</option>
+                        </select>
+                    </div>
+
+                    <div class="d-flex justify-content-center m-3">
+                        <button type="submit" class="btn btn-outline-primary" routerLink='/myProducts'>Meus Produtos</button>
+                        <button type="submit" class="btn btn-outline-success">Alterar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
