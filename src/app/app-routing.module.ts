@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CartComponent } from './components/cart/cart.component';
 import { HomeComponent } from './components/home/home.component';
-import { ProductsUserComponent } from './components/products-user/products-user.component';
 import { StoreComponent } from './components/store/store.component';
+import { ProductsUserComponent } from './components/products-user/products-user.component';
+import { AccountComponent } from './components/account/account.component';
+import { PostProdutoComponent } from './components/post-produto/post-produto.component';
+import { PutProdutoComponent } from './components/put-produto/put-produto.component';
 
 const routes: Routes = [
 
@@ -11,8 +15,14 @@ const routes: Routes = [
 
   {path: 'home', component: HomeComponent},
   {path: 'store', component: StoreComponent},
+  // {path: 'about', component: AboutComponent},
+  // {path: 'contact', component: ContactComponent},
+
+  {path: 'account', component: AccountComponent},
+  {path: 'new-product', component: PostProdutoComponent},
+  {path: 'edit-product', component: PutProdutoComponent},
+  {path: 'myProducts', component: ProductsUserComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'myProducts', component: ProductsUserComponent}
 
 ];
 

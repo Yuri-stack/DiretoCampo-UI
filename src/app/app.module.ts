@@ -16,7 +16,6 @@ import { PostProdutoComponent } from './components/post-produto/post-produto.com
 import { PutProdutoComponent } from './components/put-produto/put-produto.component';
 import { RegisterComponent } from './components/register/register.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
