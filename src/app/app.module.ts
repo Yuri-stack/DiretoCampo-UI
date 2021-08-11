@@ -15,6 +15,7 @@ import { AccountComponent } from './components/account/account.component';
 import { PostProdutoComponent } from './components/post-produto/post-produto.component';
 import { PutProdutoComponent } from './components/put-produto/put-produto.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ConfirmSalesComponent } from './components/confirm-sales/confirm-sales.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RegisterComponent } from './components/register/register.component';
     PostProdutoComponent,
     PutProdutoComponent,
     RegisterComponent,
+    ConfirmSalesComponent,
    
   ],
   imports: [

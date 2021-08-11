@@ -8,6 +8,7 @@ import { ProductsUserComponent } from './components/products-user/products-user.
 import { AccountComponent } from './components/account/account.component';
 import { PostProdutoComponent } from './components/post-produto/post-produto.component';
 import { PutProdutoComponent } from './components/put-produto/put-produto.component';
+import { ConfirmSalesComponent } from './components/confirm-sales/confirm-sales.component';
 
 const routes: Routes = [
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'edit-product', component: PutProdutoComponent},
   {path: 'myProducts', component: ProductsUserComponent},
   {path: 'cart', component: CartComponent},
+  {path: 'confirm', component: ConfirmSalesComponent}
 
 ];
 
