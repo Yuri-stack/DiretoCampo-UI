@@ -12,6 +12,7 @@ import { ConfirmSalesComponent } from './components/confirm-sales/confirm-sales.
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PutUserComponent } from './components/put-user/put-user.component';
 
 const routes: Routes = [
 
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path: 'myProducts', component: ProductsUserComponent},
   {path: 'cart', component: CartComponent},
   {path: 'confirm', component: ConfirmSalesComponent},
-  {path: 'edit-product', component: PutProdutoComponent}
+  {path: 'edit-product', component: PutProdutoComponent},
+  {path: 'edit-user', component: PutUserComponent}
 ];
 
 @NgModule({

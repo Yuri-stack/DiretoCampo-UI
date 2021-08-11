@@ -18,6 +18,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { ConfirmSalesComponent } from './components/confirm-sales/confirm-sales.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
+import { PutUserComponent } from './components/put-user/put-user.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { LoginComponent } from './components/login/login.component';
    
     ContactComponent,
     LoginComponent,
+    PutUserComponent,
   ],
   imports: [
     BrowserModule,
