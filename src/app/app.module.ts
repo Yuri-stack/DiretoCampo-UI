@@ -16,6 +16,7 @@ import { PostProdutoComponent } from './components/post-produto/post-produto.com
 import { PutProdutoComponent } from './components/put-produto/put-produto.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { SobreComponent } from './components/sobre/sobre.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ContactComponent } from './components/contact/contact.component';
     PutProdutoComponent,
     RegisterComponent,
     ContactComponent,
+    SobreComponent,
   ],
   imports: [
     BrowserModule,
