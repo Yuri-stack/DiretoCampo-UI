@@ -8,6 +8,7 @@ import { ProductsUserComponent } from './components/products-user/products-user.
 import { AccountComponent } from './components/account/account.component';
 import { PostProdutoComponent } from './components/post-produto/post-produto.component';
 import { PutProdutoComponent } from './components/put-produto/put-produto.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
 
@@ -15,10 +16,11 @@ const routes: Routes = [
 
   {path: 'home', component: HomeComponent},
   {path: 'store', component: StoreComponent},
-  // {path: 'about', component: AboutComponent},
-  // {path: 'contact', component: ContactComponent},
+  // {path: 'about', component: SobreComponent},
+  {path: 'contact', component: ContactComponent},
 
   {path: 'account', component: AccountComponent},
+  // {path: '/login', component: LoginComponent},
   {path: 'new-product', component: PostProdutoComponent},
   {path: 'edit-product', component: PutProdutoComponent},
   {path: 'myProducts', component: ProductsUserComponent},
