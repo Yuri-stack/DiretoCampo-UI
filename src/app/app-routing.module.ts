@@ -25,12 +25,11 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
 
   {path: 'account', component: AccountComponent},
-  {path: 'cart', component: CartComponent},
+  {path: 'cart/:id', component: CartComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'new-product', component: PostProdutoComponent},
   {path: 'myProducts', component: ProductsUserComponent},
-  {path: 'cart', component: CartComponent},
   {path: 'confirm', component: ConfirmSalesComponent},
   {path: 'edit-product/:id', component: PutProdutoComponent},
   {path: 'edit-user/:id', component: PutUserComponent}

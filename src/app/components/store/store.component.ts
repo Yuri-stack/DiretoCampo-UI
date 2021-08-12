@@ -16,7 +16,6 @@ export class StoreComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllProduto()
-    // this.getById()
   }
 
   getAllProduto(){
