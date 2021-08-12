@@ -4,7 +4,7 @@
 
             <div class="col-md-6 d-flex justify-content-center border-right">
                 <img class="img-fluid rounded-circle border border-success m-5"
-                    src="https://avatars.githubusercontent.com/u/62682253?v=4" alt="">
+                    src="{{ usuario.imagem }}" alt="">
             </div>
 
             <div class="col-md-6">
@@ -13,22 +13,22 @@
 
                     <div class="form-group">
                         <label for="nome">Nome:</label>
-                        <input class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
+                        <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input class="form-control" type="text" name="email" id="email" placeholder="Seu email">
+                        <input [(ngModel)]="usuario.email" class="form-control" type="text" name="email" id="email" placeholder="Seu email">
                     </div>
 
                     <div class="form-group">
                         <label for="cep">Meu CEP:</label>
-                        <input class="form-control" type="text" name="cep" id="cep" placeholder="Seu cep">
+                        <input [(ngModel)]="usuario.cep" class="form-control" type="text" name="cep" id="cep" placeholder="Seu cep">
                     </div>
 
                     <div class="form-group">
                         <label for="tipo">Tipo de de Usuário:</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select [(ngModel)]="usuario.tipo" class="form-control" name="tipo" id="tipo">
                             <option>Selecione um tipo de Usuário</option>
                             <option value="cons">Consumidor</option>
                             <option value="prod">Produtor</option>

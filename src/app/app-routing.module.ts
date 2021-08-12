@@ -32,8 +32,8 @@ const routes: Routes = [
   {path: 'myProducts', component: ProductsUserComponent},
   {path: 'cart', component: CartComponent},
   {path: 'confirm', component: ConfirmSalesComponent},
-  {path: 'edit-product', component: PutProdutoComponent},
-  {path: 'edit-user', component: PutUserComponent}
+  {path: 'edit-product/:id', component: PutProdutoComponent},
+  {path: 'edit-user/:id', component: PutUserComponent}
 ];
 
 @NgModule({

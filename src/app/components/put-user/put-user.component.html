@@ -6,29 +6,29 @@
                 <div class="col-md-10">
                     <h1 class="text-center">Alterar</h1>
 
-                    <div class="form-group">
+                    <div class="form-group"> 
                         <label for="nome">Usuárrio</label>
-                        <input type="text" class="form-control"name="nome" id="nome" placeholder="Digite seu nome">
+                        <input [(ngModel)]="usuario.nome" type="text" class="form-control"name="nome" id="nome" placeholder="Digite seu nome">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control"name="email" id="email" placeholder="Digite seu email">
+                        <input [(ngModel)]="usuario.email" type="text" class="form-control"name="email" id="email" placeholder="Digite seu email">
                     </div>
 
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control"name="senha" id="senha" placeholder="Digite sua senha">
+                        <input [(ngModel)]="usuario.senha" type="password" class="form-control"name="senha" id="senha" placeholder="Digite sua senha">
                     </div>
 
                     <div class="form-group">
                         <label for="cep">CEP</label>
-                        <input type="text" class="form-control"name="cep" id="cep" placeholder="Digite seu CEP">
+                        <input [(ngModel)]="usuario.cep" type="text" class="form-control"name="cep" id="cep" placeholder="Digite seu CEP">
                     </div>
 
                     <div class="form-group">
                         <label for="tipo">Tipo de Usuário</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select [(ngModel)]="usuario.tipo" class="form-control" name="tipo" id="tipo">
                             <option>Selecione o tipo de usuário</option>
                             <option value="cons">Consumidor</option>
                             <option value="prod">Produtor</option>
@@ -38,15 +38,15 @@
 
                     <div class="form-group">
                         <label for="imagem">Imagem</label>
-                        <input type="img" class="form-control"imagem="imagem" id="imagem"
+                        <input [(ngModel)]="usuario.imagem" type="img" class="form-control"imagem="imagem" id="imagem"
                         placeholder="Digite a url da imagem">
 
                     </div>
 
                     <div class="d-flex justify-content-center m-3">
                         <button type="submit" class="btn btn-outline-danger">Apagar</button>
-                        <button type="submit" class="btn btn-outline-success">Atualizar</button>
-                    </div>
+                        <button type="button" class="btn btn-outline-success" [routerLink] = "['/edit-product', usuario.id]">Editar</button>
+                    </div> 
                 </div>
             </div>
         </div>

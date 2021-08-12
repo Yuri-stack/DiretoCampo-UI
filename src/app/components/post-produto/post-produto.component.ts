@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Produto } from 'src/app/models/Produto';
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-post-produto',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostProdutoComponent implements OnInit {
 
-  constructor() { }
+  produto: Produto = new Produto()
 
-  ngOnInit(): void {
+  constructor(
+    private produtoService: ProdutoService,
+    private router: Router
+  ) { }
+
+  ngOnInit(): void {}
+
+  cadastrar(){
+    this.produtoService.post(this.produto).subscribe((resp: Produto) => {
+      this.router.navigate(['/myProducts'])
+    })
   }
 
 }
