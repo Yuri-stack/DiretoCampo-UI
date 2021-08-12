@@ -25,7 +25,7 @@
                         <h5 class="text-center">R${{ item.preco }}/kg</h5>
 
                         <div class="d-flex justify-content-center mt-4">
-                            <button type="button" class="btn btn-outline-success">Comprar</button>
+                            <button type="button" class="btn btn-outline-success" [routerLink] = "['/cart', item.id]">Comprar</button>
                         </div>
 
                     </div>

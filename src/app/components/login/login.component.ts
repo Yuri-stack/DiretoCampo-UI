@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Usuario } from 'src/app/models/Usuario';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario = new Usuario()
+
+  constructor(
+    private router: Router,
+    private serviceUsuario: UsuarioService) { }
 
   ngOnInit(): void {
   }
 
+  logar(){                      
+    environment.token = true
+    // this.serviceUsuario.getByUserEmail(this.usuario.email).subscribe((resp: Usuario)=>{
+    //   this.usuario = resp
+    //   console.log(this.usuario)
+    //   environment.userId = this.usuario.id
+    // })
+    this.router.navigate(['/account'])
+  }
+
+  logado(){
+    let logged = false                           
+    environment.token = true   
+    return logged       
+  }
 }

@@ -13,21 +13,20 @@
                 </form>
             </div>
         </div>
-        <!-- Título e Busca -->
+        <!-- Título e Busca --> 
 
         <div class="row row-cols-1 row-cols-md-4 g-4 mt-3 mb-2 pb-4">
             <div class="col">
-                <div class="card">
-                    <img src=""
-                        class="card-img-top" alt="">
+                <div class="card" *ngFor="let item of listaProduto">
+                    <img src="{{ item.imagem }}"
+                        class="card-img-top" alt="{{ item.nome }}">
                     <div class="card-body">
-                        <h4 class="card-title text-center"></h4>
-                        <h5 class="text-center">R$/kg</h5>
+                        <h4 class="card-title text-center">{{ item.nome }}</h4>
+                        <h5 class="text-center">R${{ item.preco }}/kg</h5>
 
                         <div class="d-flex justify-content-center mt-4">
-                            <button type="button" class="btn btn-outline-success">Comprar</button>
+                            <button type="button" class="btn btn-outline-success" [routerLink] = "['/edit-product', item.id]">Editar</button>
                         </div>
-
                     </div>
                 </div>
             </div>

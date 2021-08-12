@@ -8,17 +8,17 @@
 
                     <div class="form-group">
                         <label for="nome">Nome do Produto</label>
-                        <input type="text" class="form-control"name="nome" id="nome" placeholder="Nome do Produto">
+                        <input [(ngModel)]="produto.nome" type="text" class="form-control" name="nome" id="nome" placeholder="Nome do Produto">
                     </div>
 
                     <div class="form-group">
                         <label for="descricao">Descrição do Produto</label>
-                        <textarea class="form-control" name="descricao" id="descricao" placeholder="Descrição do Produto" cols="30" rows="3"></textarea>
+                        <textarea [(ngModel)]="produto.descricao" class="form-control" name="descricao" id="descricao" placeholder="Descrição do Produto" cols="30" rows="3"></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="categoria">Categoria</label>
-                        <select class="form-control" name="categoria" id="categoria">
+                        <select [(ngModel)]="produto.categoria" class="form-control" name="categoria" id="categoria">
                             <option>Selecione a categoria do Produto</option>
                             <option value="cons">Consumidor</option>
                             <option value="prod">Produtor</option>
@@ -28,23 +28,23 @@
                  
                     <div class="form-group">
                         <label for="preco">Preço</label>
-                        <input type="number" class="form-control"preco="preco" id="preco"
+                        <input [(ngModel)]="produto.preco" type="number" class="form-control"preco="preco" id="preco"
                         placeholder="Preço">
                     </div>
 
                     <div class="form-group">
                         <label for="quantidade">Quantidade</label>
-                        <input type="number" class="form-control"quantidade="quantidade" id="quantidade" placeholder="Quantidade">
+                        <input [(ngModel)]="produto.quantidade" type="number" class="form-control"quantidade="quantidade" id="quantidade" placeholder="Quantidade">
 
                     <div class="form-group">
                         <label for="imagem">Imagem</label>
-                        <input type="img" class="form-control"imagem="imagem" id="imagem"
+                        <input [(ngModel)]="produto.imagem" type="img" class="form-control"imagem="imagem" id="imagem"
                         placeholder="Url da imagem">
                     </div>
 
                     <div class="d-flex justify-content-center m-3">
                         <button type="submit" class="btn btn-outline-danger" routerLink='/entrar'>Cancelar</button>
-                        <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+                        <button type="submit" class="btn btn-outline-success" (click)="cadastrar()" >Cadastrar</button>
                     </div>
                     </div>
                 </div>
