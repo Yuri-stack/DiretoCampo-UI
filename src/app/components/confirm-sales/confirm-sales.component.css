@@ -1,0 +1,11 @@
+.confirm{
+    min-height: 78vh;
+}
+
+.col-md-12 h1{
+    margin-top: 2em;    /*2em = 32px*/
+}
+
+p{
+    font-size: 1.2em;
+}

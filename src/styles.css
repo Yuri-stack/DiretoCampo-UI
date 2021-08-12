@@ -31,5 +31,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
+.no-border{
+    border: none;
+}
+
+.w-15{
+    width: 15%;
+}
+
+.w-70{
+    width: 70%;
+}
+
+.w-90{
+    width: 90%;
 }

@@ -15,7 +15,10 @@ import { AccountComponent } from './components/account/account.component';
 import { PostProdutoComponent } from './components/post-produto/post-produto.component';
 import { PutProdutoComponent } from './components/put-produto/put-produto.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ConfirmSalesComponent } from './components/confirm-sales/confirm-sales.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { LoginComponent } from './components/login/login.component';
+import { PutUserComponent } from './components/put-user/put-user.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 
 
@@ -32,7 +35,10 @@ import { SobreComponent } from './components/sobre/sobre.component';
     PostProdutoComponent,
     PutProdutoComponent,
     RegisterComponent,
+    ConfirmSalesComponent,
     ContactComponent,
+    LoginComponent,
+    PutUserComponent,
     SobreComponent,
   ],
   imports: [
