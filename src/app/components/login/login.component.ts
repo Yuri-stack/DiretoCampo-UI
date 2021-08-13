@@ -22,17 +22,22 @@ export class LoginComponent implements OnInit {
 
   logar(){                      
     environment.token = true
-    // this.serviceUsuario.getByUserEmail(this.usuario.email).subscribe((resp: Usuario)=>{
-    //   this.usuario = resp
-    //   console.log(this.usuario)
-    //   environment.userId = this.usuario.id
-    // })
-    this.router.navigate(['/account'])
+    
+    this.serviceUsuario.getByUserEmail(this.usuario.email).subscribe((resp: Usuario)=>{
+      this.usuario = resp
+      environment.userId = this.usuario.id
+
+      this.logado()
+
+      this.router.navigate(['/account'])
+    }, erro => {
+      alert("Usuário ou senha incorretos")
+    })
   }
 
   logado(){
-    let logged = false                           
-    environment.token = true   
+    let logged = true                           
+    environment.token = true 
     return logged       
   }
 }

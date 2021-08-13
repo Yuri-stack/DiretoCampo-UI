@@ -22,7 +22,7 @@ export class AccountComponent implements OnInit {
   getUserById(){
     this.serviceUsuario.getByUserId(this.userId).subscribe((resp: Usuario) => {
       this.usuario = resp
-      console.log(this.usuario)
+      // console.log(this.usuario)
     })
   }
 
