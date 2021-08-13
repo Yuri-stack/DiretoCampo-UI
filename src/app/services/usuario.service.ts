@@ -34,9 +34,15 @@ export class UsuarioService {
     return this.http.delete(`${this.url}/${id}`)
   }
 
-  logado(){ 
-    let logged = false                           
-    environment.token = true   
-    return logged       
+  isLogged(){
+    let logged = false                            // let ok = false
+    if(environment.token != false) logged = true    // let ok = true
+    return logged                                   // return ok
+  }
+
+  isLogouted(){
+    let logged = true
+    if(environment.token != true) logged = false
+    return logged     
   }
 } 

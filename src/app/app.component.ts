@@ -7,6 +7,7 @@ import { UsuarioService } from './services/usuario.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(public usuario: UsuarioService){}
-  title = 'diretoCampo';
+  constructor(
+    public usuario: UsuarioService
+  ){}
 }

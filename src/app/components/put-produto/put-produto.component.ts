@@ -49,7 +49,7 @@ export class PutProdutoComponent implements OnInit {
       this.produtoService.delete(this.produto.id).subscribe(() => {
         // this.alerts.showAlertSuccess('Post deleted successfully')
         alert("Produto Apagado com Sucesso")
-        this.router.navigate(['/account'])
+        this.router.navigate(['/myProducts'])
       })
     }
   }

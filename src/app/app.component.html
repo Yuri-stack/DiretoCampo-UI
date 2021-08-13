@@ -1,4 +1,4 @@
-<app-menu *ngIf='usuario.logado()'></app-menu>
-<app-menu></app-menu>
+<app-menu *ngIf='usuario.isLogged() == false'></app-menu>
+<app-menu-logged *ngIf='usuario.isLogged() == true'></app-menu-logged>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

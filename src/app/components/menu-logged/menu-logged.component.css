@@ -1,0 +1,9 @@
+li.nav-item{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.bg-green-light{
+    background-color: #fff;
+}
