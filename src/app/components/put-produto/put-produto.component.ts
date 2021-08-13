@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from 'src/app/models/Produto';
 import { Usuario } from 'src/app/models/Usuario';
 import { ProdutoService } from 'src/app/services/produto.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-put-produto',
@@ -12,6 +13,7 @@ import { ProdutoService } from 'src/app/services/produto.service';
 export class PutProdutoComponent implements OnInit {
 
   produto: Produto = new Produto()
+  userId = environment.userId
 
   constructor(
     private route: ActivatedRoute,
@@ -32,7 +34,7 @@ export class PutProdutoComponent implements OnInit {
   update(){
     let usuario: Usuario = new Usuario
 
-    usuario.id = this.route.snapshot.params["id"] 
+    usuario.id = this.userId
     this.produto.usuario = usuario
 
     this.produtoService.put(this.produto).subscribe((resp: Produto)=>{

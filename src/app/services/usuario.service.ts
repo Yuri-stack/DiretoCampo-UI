@@ -26,7 +26,15 @@ export class UsuarioService {
     return this.http.post<Usuario>(`${this.url}`, usuario)
   }
 
-  logado(){
+  atualizar(usuario: Usuario): Observable<Usuario>{
+    return this.http.put<Usuario>(`${this.url}`, usuario)
+  }
+
+  delete(id: number){
+    return this.http.delete(`${this.url}/${id}`)
+  }
+
+  logado(){ 
     let logged = false                           
     environment.token = true   
     return logged       

@@ -25,6 +25,7 @@ export class ProductsUserComponent implements OnInit {
     this.serviceUsuario.getByUserId(this.userId).subscribe((resp: Usuario) => {
       this.usuario = resp
       this.listaProduto = this.usuario.produto
+      console.log(this.listaProduto)
     })
   }
 }

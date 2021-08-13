@@ -28,17 +28,12 @@
 
                     <div class="form-group">
                         <label for="tipo">Tipo de de Usuário:</label>
-                        <select [(ngModel)]="usuario.tipo" class="form-control" name="tipo" id="tipo">
-                            <option>Selecione um tipo de Usuário</option>
-                            <option value="cons">Consumidor</option>
-                            <option value="prod">Produtor</option>
-                            <option value="pdr">Ponto de Retirada</option>
-                        </select>
+                        <input [(ngModel)]="usuario.tipo" class="form-control" type="text" name="tipo" id="tipo" placeholder="Tipo do seu usuário">
                     </div>
 
                     <div class="d-flex justify-content-center m-3">
                         <button type="submit" class="btn btn-outline-primary" routerLink='/myProducts'>Meus Produtos</button>
-                        <button type="submit" class="btn btn-outline-success" routerLink='/edit-user'>Alterar</button>
+                        <button type="submit" class="btn btn-outline-success" [routerLink]="['/edit-user/', usuario.id]">Alterar</button>
                     </div>
                 </div>
             </div>
