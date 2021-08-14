@@ -20,8 +20,9 @@ export class CartComponent implements OnInit {
   userId = environment.userId
   productId: number
 
-  precoTotal = 5 //variavel ficticia q temos que mudar conforme o front
-  quantidade = 5 //variavel ficticia q temos que mudar conforme o front
+  subTotal: number
+  precoTotal: number
+  quantidade: number
 
   constructor(
     private route: ActivatedRoute,
@@ -39,6 +40,10 @@ export class CartComponent implements OnInit {
     this.produtoService.getById(id).subscribe((resp: Produto) => {
       this.produto = resp
     })
+  }
+
+  atualizaValor(){
+    this.precoTotal = this.quantidade * this.produto.preco
   }
 
   comprar(){

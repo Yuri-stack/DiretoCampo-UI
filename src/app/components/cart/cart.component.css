@@ -2,6 +2,12 @@
     min-height: 78vh;
 }
 
+img{
+    height: 150px;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
 .borderRightBottom{
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;

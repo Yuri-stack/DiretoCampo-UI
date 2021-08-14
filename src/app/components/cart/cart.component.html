@@ -12,12 +12,12 @@
         <div class="row d-flex flex-row align-items-center">
             <div class="col-md-8 d-flex mt-2 borderRight">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="card mt-5 no-border" style="max-width: 540px;">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
                                     <img src="{{ produto.imagem }}"
-                                        class="card-img" alt="...">
+                                        class="card-img" alt="..."> 
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body no-border">
@@ -29,27 +29,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-center mt-4 pl-4">
-                        <div class="row d-flex align-items-center w-70">
-                            <label for="quantity">Quantidade:</label>
-                            <input type="number" id="quantity" name="quantity" min="1" value="{{ produto.quantidade }}">
-                            <label for="preco">Preço:</label>
-                            <input type="number" id="preco" name="preco" min="1" value="{{ produto.preco }}">
+                    <div class="col-md-6 d-flex justify-content-center mt-4 pl-4">
+                        <div class="row d-flex align-items-center w-50">
+                            <div class="d-flex justify-content-center">
+                                <label for="quantity">Quantidade: </label>
+                                <input type="number" [(ngModel)]="quantidade" (change)="atualizaValor()" id="quantity" name="quantity" min="1" max="{{ produto.quantidade }}" value="1">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <label for="preco">Preço:</label>
+                                <input type="number" id="preco" name="preco" min="1" max="{{ produto.preco }}" value="{{ produto.preco }}" disabled >
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="row">
+            <div class="col-md-4 borderBottom">
+                <div class="row mt-5">
                     <div class="col-md-6">
                         <h5>Subtotal</h5>
                         <hr>
                         <h5>Total</h5>
                     </div>
                     <div class="col-md-6">
-                        <input class="w-100" type="number" id="subtotal" name="subtotal" value="{{ produto.preco }}">
+                        <input class="w-100" type="number" [(ngModel)]="subTotal" id="subtotal" name="subtotal" value="{{ produto.preco }}" disabled>
                         <hr>
-                        <input class="w-100" type="number" id="total" name="total" min="1">
+                        <input class="w-100" type="number" [(ngModel)]="precoTotal" id="total" name="total" disabled>
                     </div>
                 </div>
                 <div class="row ">
