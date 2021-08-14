@@ -34,6 +34,10 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.productId = this.route.snapshot.params["id"]
     this.findById(this.productId)
+    if(environment.token == false){
+      alert("Você precisa estar logado para acessar essa parte")
+      this.router.navigate(['/login'])
+    }
   } 
 
   findById(id: number){

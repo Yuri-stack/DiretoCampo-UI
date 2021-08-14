@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-confirm-sales',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfirmSalesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    if(environment.token == false){
+      alert("Você precisa estar logado para acessar essa parte")
+      this.router.navigate(['/login'])
+    }
   }
 
 }

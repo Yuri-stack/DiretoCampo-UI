@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/Usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { environment } from 'src/environments/environment.prod';
@@ -13,10 +14,17 @@ export class AccountComponent implements OnInit {
   userId = environment.userId
   usuario: Usuario = new Usuario()
 
-  constructor(private serviceUsuario: UsuarioService) { }
+  constructor(
+    private serviceUsuario: UsuarioService, 
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.getUserById()
+    if(environment.token == false){
+      alert("Você precisa estar logado para acessar essa parte")
+      this.router.navigate(['/login'])
+    }
   }
 
   getUserById(){

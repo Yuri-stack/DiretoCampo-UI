@@ -21,7 +21,12 @@ export class PostProdutoComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(environment.token == false){
+      alert("Você precisa estar logado para acessar essa parte")
+      this.router.navigate(['/login'])
+    }
+  }
 
   cadastrar(){
     this.usuario.id = this.userId

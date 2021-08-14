@@ -23,6 +23,11 @@ export class PutProdutoComponent implements OnInit {
   ngOnInit(): void { 
     let id: number = this.route.snapshot.params["id"]
     this.findById(id)
+
+    if (environment.token == false) {
+      alert("Você precisa estar logado para acessar essa parte")
+      this.router.navigate(['/login'])
+    }
   }
 
   findById(id: number){
