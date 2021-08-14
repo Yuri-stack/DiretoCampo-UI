@@ -23,10 +23,4 @@ export class StoreComponent implements OnInit {
       this.listaProdutos = resp
     })
   }
-
-  getById(){
-    this.produtoService.getById(2).subscribe((resp: Produto) => {
-      this.produto = resp
-    })
-  }
 }

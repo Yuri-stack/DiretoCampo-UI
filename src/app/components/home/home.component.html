@@ -29,49 +29,20 @@
 <!-- Ofertas da Semana -->
 <div class="ofertas p-0 mt-2 mb-2">
     <div class="container pb-1">
-        <h1 class="text-center text-white pt-4">Ofertas da Semana</h1>
+        <h1 class="text-center text-white pt-4">Últimas Ofertas</h1>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3 mb-5">
-            <div class="col">
+        <div class="row row-cols-1 row-cols-md-4 g-4 mt-3 mb-2 pb-4">
+            <div class="col" *ngFor='let item of listaProdutos'>
                 <div class="card">
-                    <img src="https://dourados.saofranciscoonline.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/e/cebola-kg-0000000028455.jpg"
-                        class="card-img-top" alt="...">
+                    <img src="{{ item.imagem }}"
+                        class="card-img-top" alt="{{ item.nome }}">
                     <div class="card-body">
-                        <h4 class="card-title text-center">Cebola</h4>
-                        <h5 class="text-center">R$5,00kg</h5>
+                        <h4 class="card-title text-center">{{ item.nome }}</h4>
+                        <p class="card-text">{{ item.descricao }}</p>
+                        <h5 class="text-center">R${{ item.preco }}/kg</h5>
 
                         <div class="d-flex justify-content-center mt-4">
-                            <a routerLink='/cart' class="btn btn-outline-success">Comprar</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://www.infoescola.com/wp-content/uploads/2010/08/cenoura_250834906.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">Cenoura</h4>
-                        <h5 class="text-center">R$5,00kg</h5>
-
-                        <div class="d-flex justify-content-center mt-4">
-                            <a routerLink='/cart' class="btn btn-outline-success">Comprar</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://segredosdomundo.r7.com/wp-content/uploads/2020/08/batatas-origem-tipos-e-utilidades-que-vao-alem-da-alimentacao-23.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title text-center">Batata</h4>
-                        <h5 class="text-center">R$5,00kg</h5>
-
-                        <div class="d-flex justify-content-center mt-4">
-                            <a routerLink='/cart' class="btn btn-outline-success">Comprar</a>
+                            <button type="button" class="btn btn-outline-success" [routerLink] = "['/cart', item.id]">Comprar</button>
                         </div>
 
                     </div>
