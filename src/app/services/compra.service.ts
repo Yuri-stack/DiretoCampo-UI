@@ -9,7 +9,7 @@ import { Compra } from '../models/Compra';
 })
 export class CompraService {
 
-  url: string = `${environment.server}/produtos`
+  url: string = `${environment.server}/compras`
 
   constructor(private http: HttpClient) { }
 

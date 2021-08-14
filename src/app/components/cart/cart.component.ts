@@ -18,9 +18,10 @@ export class CartComponent implements OnInit {
   compra: Compra = new Compra()
   usuario: Usuario = new Usuario()
   userId = environment.userId
+  productId: number
 
-  precoTotal: 5 //variavel ficticia q temos que mudar conforme o front
-  quantidade: 5 //variavel ficticia q temos que mudar conforme o front
+  precoTotal = 5 //variavel ficticia q temos que mudar conforme o front
+  quantidade = 5 //variavel ficticia q temos que mudar conforme o front
 
   constructor(
     private route: ActivatedRoute,
@@ -30,9 +31,9 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    let id: number = this.route.snapshot.params["id"]
-    this.findById(id)
-  }
+    this.productId = this.route.snapshot.params["id"]
+    this.findById(this.productId)
+  } 
 
   findById(id: number){
     this.produtoService.getById(id).subscribe((resp: Produto) => {
@@ -41,8 +42,14 @@ export class CartComponent implements OnInit {
   }
 
   comprar(){
-    this.compra.usuario.id = this.userId
-    this.compra.produto.id = this.produto.id
+    let produtoSale = new Produto()
+
+    this.usuario.id = this.userId
+    this.compra.usuario = this.usuario
+
+    produtoSale.id = this.productId
+    this.compra.produto = produtoSale
+
     this.compra.precoTotal = this.precoTotal
     this.compra.quantidade = this.quantidade
     this.compra.status = true
