@@ -8,23 +8,22 @@
                     
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control"name="nome" id="nome" placeholder="Nome">
+                        <input [(ngModel)]="nome" type="text" class="form-control"name="nome" id="nome" placeholder="Nome" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control"email="email" id="email" placeholder="Email">
+                        <input [(ngModel)]="email" type="text" class="form-control"email="email" id="email" placeholder="Email" required>
                     </div>
 
                     <div class="form-group">
                         <label for="mensagem">Digite sua Mensagem</label>
-                        <textarea class="form-control" name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="3"></textarea>
+                        <textarea [(ngModel)]="mensagem" class="form-control" name="mensagem" id="mensagem" placeholder="Mensagem" cols="30" rows="3" required></textarea>
                     </div>
   
                     <div class="d-flex justify-content-center m-3">
                         <button type="submit" class="btn btn-outline-danger" routerLink='/entrar'>Cancelar</button>
-                        <button type="submit" class="btn btn-outline-success">Enviar</button>
-                
+                        <button type="submit" class="btn btn-outline-success" (click)="enviar()">Enviar</button>
                     </div>
                 </div>
             </div>
